@@ -8,21 +8,23 @@ public class Customer {
     @Id
     public String id;
 
-    public String firstName;
-    public String lastName;
+    private String firstName;
+    private String lastName;
+    private String address;
 
     public Customer() {}
 
-    public Customer(String firstName, String lastName) {
+    public Customer(String firstName, String lastName, String address) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.address = address;
     }
 
     @Override
     public String toString() {
         return String.format(
-                "Customer[id=%s, firstName='%s', lastName='%s']",
-                id, firstName, lastName);
+                "Customer[id=%s, firstName='%s', lastName='%s', address='%s']",
+                id, firstName, lastName, address);
     }
 
 }
